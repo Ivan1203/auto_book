@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefWidth="555.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="ru.javabegin.training.fastjava2.javafx.controllers.MainController">
+  <children>
+    <HBox maxHeight="50.0" prefHeight="100.0">
+      <children>
+        <Button fx:id="btnAdd" mnemonicParsing="false" onAction="#actionButtonPressed" prefWidth="104.0" text="Добавить">
+          <HBox.margin>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+          </HBox.margin>
+        </Button>
+        <Button fx:id="btnEdit" mnemonicParsing="false" onAction="#actionButtonPressed" prefWidth="110.0" text="Изменить">
+          <HBox.margin>
+            <Insets bottom="20.0" left="80.0" right="20.0" top="20.0" />
+          </HBox.margin>
+        </Button>
+        <Button fx:id="btnDelete" mnemonicParsing="false" onAction="#actionButtonPressed" prefWidth="91.0" text="Удалить">
+          <HBox.margin>
+            <Insets bottom="20.0" left="90.0" right="20.0" top="20.0" />
+          </HBox.margin>
+        </Button>
+      </children>
+    </HBox>
+    <AnchorPane prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+      <children>
+        <TableView fx:id="tableAddressBook" prefHeight="400.0" prefWidth="357.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+          <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+          </columnResizePolicy>
+          <columns>
+            <TableColumn minWidth="100.0" text="Производитель" fx:id="columnMade" />
+            <TableColumn minWidth="100.0" prefWidth="-1.0" text="Модель" fx:id="columnModel" />
+            <TableColumn minWidth="100.0" prefWidth="-1.0" text="Год выпуска" fx:id="columnYears" />
+            <TableColumn minWidth="100.0" prefWidth="-1.0" text="Тип кузова" fx:id="columnType" />
+          </columns>
+        </TableView>
+      </children>
+      <VBox.margin>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+      </VBox.margin>
+    </AnchorPane>
+    <AnchorPane prefHeight="30.0" prefWidth="200.0">
+      <children>
+        <Label fx:id="labelCount" text="Количество записей:" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" />
+      </children>
+      <VBox.margin>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+      </VBox.margin>
+    </AnchorPane>
+  </children>
+</VBox>
